@@ -1,0 +1,17 @@
+// pahle create  a server...
+
+const http = require("http");
+http
+  .createServer((request, responce) => {
+    responce.writeHead(200, { "content-type": "application" });
+
+    responce.write(
+      JSON.stringify({
+        name: `piyush`,
+        class: `be`,
+        roll: 101,
+      })
+    );
+    responce.end();
+  })
+  .listen(3500);
